@@ -1,0 +1,35 @@
+{
+  "allOriginalModelGroupsUseUniformScale": true,
+  "originalModels": [
+    {
+      "file": "kitchen 1 3d model.glb",
+      "sourceSHA256": "250487a301ca1a9f708817c925be83ba697568f793e820bb2c86efada2d0a50b",
+      "sourceUnchanged": true,
+      "exportedGeometryUVNormalsAndIndicesByteIdentical": true,
+      "exportedTextureImagesByteIdentical": true
+    },
+    {
+      "file": "kitchen 2 3d model.glb",
+      "sourceSHA256": "d78eb5aa8a17c092a37bb4ff92c9f207cf94f7ac9e6e5a77943ac90bc9165f4b",
+      "sourceUnchanged": true,
+      "exportedGeometryUVNormalsAndIndicesByteIdentical": true,
+      "exportedTextureImagesByteIdentical": true
+    },
+    {
+      "file": "wooden shelf 3d model.glb",
+      "sourceSHA256": "069ed23552b916b421f311bcc5e4e6f71eff9bb6c457fbd6dcecd58b2b164d28",
+      "sourceUnchanged": true,
+      "exportedGeometryUVNormalsAndIndicesByteIdentical": true,
+      "exportedTextureImagesByteIdentical": true
+    },
+    {
+      "file": "kitchen oven 3d model.glb",
+      "sourceSHA256": "eabc136b17c867d6139468deabadd5f6649310a58471c0d81086f91245f3d882",
+      "sourceUnchanged": true,
+      "exportedGeometryUVNormalsAndIndicesByteIdentical": true,
+      "exportedTextureImagesByteIdentical": true
+    }
+  ],
+  "tableTextureImagesByteIdentical": true,
+  "tableWindowRemoved": true
+}

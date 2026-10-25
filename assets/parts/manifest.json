@@ -1,0 +1,247 @@
+[
+  {
+    "name": "native-kitchen-1",
+    "file": "../models/kitchen 1 3d model.glb",
+    "source": "kitchen 1 3d model.glb",
+    "original_unmodified": true
+  },
+  {
+    "name": "dough-balls",
+    "file": "dough-balls.glb",
+    "vertices": 104528,
+    "triangles": 177801,
+    "min": [
+      -0.490081787109375,
+      0,
+      -0.3248748183250427
+    ],
+    "max": [
+      0.490142822265625,
+      0.549163818359375,
+      0.3249358534812927
+    ],
+    "source": "dough balls 3d model.glb"
+  },
+  {
+    "name": "floor",
+    "file": "floor.glb",
+    "vertices": 101751,
+    "triangles": 174779,
+    "min": [
+      -0.4918365478515625,
+      0,
+      -0.12113197147846222
+    ],
+    "max": [
+      0.4918365478515625,
+      0.974212646484375,
+      0.12117007374763489
+    ],
+    "source": "floor 3d model.glb"
+  },
+  {
+    "name": "kitchen-baking-set",
+    "file": "kitchen-baking-set.glb",
+    "vertices": 103404,
+    "triangles": 172244,
+    "min": [
+      -0.4899139404296875,
+      6.103515625e-05,
+      -0.2919921875
+    ],
+    "max": [
+      0.4899749755859375,
+      0.19611358642578125,
+      0.291961669921875
+    ],
+    "source": "kitchen baking set 3d model.glb"
+  },
+  {
+    "name": "spare-set-0",
+    "file": "spare-set-0.glb",
+    "vertices": 14200,
+    "triangles": 28396,
+    "min": [
+      -0.10939466953277588,
+      1.1444091796875e-05,
+      -0.015366733074188232
+    ],
+    "max": [
+      0.40569624304771423,
+      0.05871391296386719,
+      0.43398934602737427
+    ],
+    "source": "kitchen set 3d model.glb"
+  },
+  {
+    "name": "spare-set-1",
+    "file": "spare-set-1.glb",
+    "vertices": 13209,
+    "triangles": 26414,
+    "min": [
+      -0.14069175720214844,
+      0.2517518401145935,
+      -0.39130741357803345
+    ],
+    "max": [
+      0.03605080395936966,
+      0.585019052028656,
+      -0.25246769189834595
+    ],
+    "source": "kitchen set 3d model.glb"
+  },
+  {
+    "name": "spare-set-2",
+    "file": "spare-set-2.glb",
+    "vertices": 10948,
+    "triangles": 21900,
+    "min": [
+      0.11354358494281769,
+      0.26183053851127625,
+      -0.3908963203430176
+    ],
+    "max": [
+      0.33803853392601013,
+      0.4466526210308075,
+      -0.28285646438598633
+    ],
+    "source": "kitchen set 3d model.glb"
+  },
+  {
+    "name": "spare-set-3",
+    "file": "spare-set-3.glb",
+    "vertices": 10203,
+    "triangles": 20482,
+    "min": [
+      -0.1895674765110016,
+      0.09734559059143066,
+      -0.3356010317802429
+    ],
+    "max": [
+      0.08238992094993591,
+      0.1689894199371338,
+      -0.07696452736854553
+    ],
+    "source": "kitchen set 3d model.glb"
+  },
+  {
+    "name": "spare-set-4",
+    "file": "spare-set-4.glb",
+    "vertices": 9402,
+    "triangles": 18791,
+    "min": [
+      -0.42979326844215393,
+      0.2634032964706421,
+      -0.43397408723831177
+    ],
+    "max": [
+      -0.21156206727027893,
+      0.5767577886581421,
+      -0.23483164608478546
+    ],
+    "source": "kitchen set 3d model.glb"
+  },
+  {
+    "name": "spare-set-5",
+    "file": "spare-set-5.glb",
+    "vertices": 8065,
+    "triangles": 16084,
+    "min": [
+      0.29414689540863037,
+      0.08500468730926514,
+      -0.07544555515050888
+    ],
+    "max": [
+      0.48959672451019287,
+      0.3198450803756714,
+      0.11376342922449112
+    ],
+    "source": "kitchen set 3d model.glb"
+  },
+  {
+    "name": "spare-set-6",
+    "file": "spare-set-6.glb",
+    "vertices": 7848,
+    "triangles": 15692,
+    "min": [
+      -0.48956620693206787,
+      0.001525193452835083,
+      0.04768466204404831
+    ],
+    "max": [
+      -0.10954606533050537,
+      0.12968376278877258,
+      0.2740030288696289
+    ],
+    "source": "kitchen set 3d model.glb"
+  },
+  {
+    "name": "spare-set-7",
+    "file": "spare-set-7.glb",
+    "vertices": 7423,
+    "triangles": 14820,
+    "min": [
+      -0.44422224164009094,
+      0.10215401649475098,
+      -0.27665287256240845
+    ],
+    "max": [
+      -0.23789289593696594,
+      0.2717936038970947,
+      -0.08513219654560089
+    ],
+    "source": "kitchen set 3d model.glb"
+  },
+  {
+    "name": "spare-set-8",
+    "file": "spare-set-8.glb",
+    "vertices": 6286,
+    "triangles": 12559,
+    "min": [
+      0.06259963661432266,
+      0.10513617098331451,
+      -0.2366221696138382
+    ],
+    "max": [
+      0.31545302271842957,
+      0.28732991218566895,
+      0.014087371528148651
+    ],
+    "source": "kitchen set 3d model.glb"
+  },
+  {
+    "name": "work-table",
+    "file": "work-table.glb",
+    "vertices": 62329,
+    "triangles": 93714,
+    "min": [
+      -0.4849395751953125,
+      6.097555160522461e-05,
+      -0.4006653428077698
+    ],
+    "max": [
+      0.4849700629711151,
+      0.2677001357078552,
+      0.4006653428077698
+    ],
+    "source": "table 3d model.glb"
+  },
+  {
+    "name": "native-kitchen-2",
+    "file": "../models/kitchen 2 3d model.glb",
+    "source": "kitchen 2 3d model.glb",
+    "original_unmodified": true
+  },
+  {
+    "name": "native-wooden-shelf",
+    "file": "../models/wooden shelf 3d model.glb",
+    "source": "wooden shelf 3d model.glb",
+    "original_unmodified": true
+  },
+  {
+    "name": "native-kitchen-oven",
+    "file": "../models/kitchen oven 3d model.glb",
+    "source": "kitchen oven 3d model.glb",
+    "original_unmodified": true
+  }
+]

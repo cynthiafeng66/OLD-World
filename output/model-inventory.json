@@ -1,0 +1,78 @@
+{
+  "source_directory": "/Users/cynthiafeng/Desktop/旧世界",
+  "source_count": 10,
+  "models": [
+    {
+      "file": "kitchen oven 3d model.glb",
+      "bytes": 60947216,
+      "meshes": 1,
+      "nodes": 1,
+      "animations": 0
+    },
+    {
+      "file": "table 3d model.glb",
+      "bytes": 35745520,
+      "meshes": 1,
+      "nodes": 1,
+      "animations": 0,
+      "edited": "Removed attached window; original texture bytes preserved",
+      "backup": "assets/originals/table-with-window-original.glb"
+    },
+    {
+      "file": "kitchen 2 3d model.glb",
+      "bytes": 60428304,
+      "meshes": 1,
+      "nodes": 1,
+      "animations": 0
+    },
+    {
+      "file": "wooden shelf 3d model.glb",
+      "bytes": 62690296,
+      "meshes": 1,
+      "nodes": 1,
+      "animations": 0
+    },
+    {
+      "file": "kitchen baking set 3d model.glb",
+      "bytes": 62141084,
+      "meshes": 1,
+      "nodes": 1,
+      "animations": 0
+    },
+    {
+      "file": "kitchen 1 3d model.glb",
+      "bytes": 61634184,
+      "meshes": 1,
+      "nodes": 1,
+      "animations": 0
+    },
+    {
+      "file": "kitchen set 3d model.glb",
+      "bytes": 46713504,
+      "meshes": 9,
+      "nodes": 10,
+      "animations": 0
+    },
+    {
+      "file": "oven_with_movable_door.glb",
+      "bytes": 583936,
+      "meshes": 36,
+      "nodes": 87,
+      "animations": 1
+    },
+    {
+      "file": "floor 3d model.glb",
+      "bytes": 69955384,
+      "meshes": 1,
+      "nodes": 1,
+      "animations": 0
+    },
+    {
+      "file": "dough balls 3d model.glb",
+      "bytes": 66759208,
+      "meshes": 1,
+      "nodes": 1,
+      "animations": 0
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "parts": [
+    {
+      "name": "Kitchen 1 · 完整原始模型",
+      "asset": "native-kitchen-1",
+      "position": [
+        -0.5,
+        0.02,
+        -2.5
+      ],
+      "scale": [
+        7.4,
+        7.4,
+        7.4
+      ]
+    },
+    {
+      "name": "Kitchen 2 · 完整原始模型",
+      "asset": "native-kitchen-2",
+      "position": [
+        3.3,
+        0.02,
+        0.51
+      ],
+      "scale": [
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "name": "左侧木柜 · 原始比例",
+      "asset": "native-wooden-shelf",
+      "position": [
+        -3.7,
+        0.02,
+        1.25
+      ],
+      "scale": [
+        2.7,
+        2.7,
+        2.7
+      ]
+    },
+    {
+      "name": "烤箱高柜 · 原始比例",
+      "asset": "native-kitchen-oven",
+      "position": [
+        3.53,
+        0.02,
+        3.22
+      ],
+      "scale": [
+        2.6,
+        2.6,
+        2.6
+      ]
+    },
+    {
+      "name": "中央木质工作桌",
+      "asset": "work-table",
+      "position": [
+        0.1,
+        0.02,
+        0.7
+      ],
+      "scale": [
+        3.05,
+        3.5,
+        2.1
+      ]
+    },
+    {
+      "name": "木地板",
+      "asset": "floor",
+      "position": [
+        0,
+        -0.026538122713567272,
+        2.876935119628906
+      ],
+      "scale": [
+        2.9,
+        3.34,
+        0.12
+      ]
+    }
+  ],
+  "triangles": 9316800,
+  "drawCalls": 24,
+  "errors": [],
+  "checks": [
+    "all 6 scene groups loaded",
+    "part editing and restore",
+    "original model scale stays uniform",
+    "reference toggle",
+    "GLB export"
+  ],
+  "lastLayoutChange": "Left shelf moved forward 1.13 scene units; scale, rotation, geometry and textures unchanged"
+}

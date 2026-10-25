@@ -1,0 +1,9 @@
+.DS_Store
+.vite/
+node_modules/
+test-results/
+playwright-report/
+*.log
+output/contact.html
+output/contact.png
+output/model-[0-9]*.png

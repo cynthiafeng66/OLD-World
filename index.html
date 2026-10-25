@@ -1,0 +1,7 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:,"/><title>旧世界 · 暖阳厨房</title><link rel="stylesheet" href="style.css"><script type="importmap">{"imports":{"three":"./vendor/three/build/three.module.js","three/addons/":"./vendor/three/examples/jsm/"}}</script></head><body>
+<main id="view"></main><header><span class="dot"></span><div><h1>暖阳厨房</h1><p id="status">正在装配原始模型…</p></div></header>
+<button id="reference" class="reference">对照参考图 ↗</button><aside id="ref" hidden><img src="references/kitchen-target.png" alt="用户提供的厨房搭建参考图"><p>参考图 · 原始模型与房间布局对照</p></aside>
+<nav><button id="reset">参考视角</button><button id="orbit">自由查看</button><button id="edit">编辑部件</button><span></span><button id="png">保存图片</button><button id="export" class="primary">导出 GLB ↓</button></nav>
+<section id="editor" hidden><h2>场景部件</h2><select id="parts"></select><p id="source"></p><div id="fields"></div><div class="row"><label><input type="checkbox" id="visible" checked> 显示部件</label><button id="restore">还原</button></div><button id="save-layout">保存布局</button><button id="load-layout">载入布局</button><input id="load-file" type="file" accept=".json" hidden></section>
+<div id="hint">拖动旋转 · 滚轮缩放 · 右键平移</div><div id="loading"><b>正在搭建厨房</b><p id="progress">载入模型与贴图</p><i><span id="bar"></span></i></div>
+<script type="module" src="room.js"></script></body></html>

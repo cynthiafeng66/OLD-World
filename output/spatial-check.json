@@ -1,0 +1,112 @@
+{
+  "originalGroups": [
+    {
+      "file": "kitchen 1 3d model.glb",
+      "scale": [
+        7.4,
+        7.4,
+        7.4
+      ],
+      "position": [
+        -0.5,
+        0.02,
+        -2.5
+      ],
+      "rotationYDegrees": 0.0,
+      "bounds": {
+        "min": [
+          -4.123895263671875,
+          0.02,
+          -3.502403038740158
+        ],
+        "max": [
+          3.123895263671875,
+          2.23719970703125,
+          -1.4975969612598419
+        ]
+      }
+    },
+    {
+      "file": "kitchen 2 3d model.glb",
+      "scale": [
+        4,
+        4,
+        4
+      ],
+      "position": [
+        3.3,
+        0.02,
+        0.51
+      ],
+      "rotationYDegrees": -90.0,
+      "bounds": {
+        "min": [
+          2.47120361328125,
+          0.02,
+          -1.44440673828125
+        ],
+        "max": [
+          4.12879638671875,
+          2.16599609375,
+          2.46440673828125
+        ]
+      }
+    },
+    {
+      "file": "wooden shelf 3d model.glb",
+      "scale": [
+        2.7,
+        2.7,
+        2.7
+      ],
+      "position": [
+        -3.7,
+        0.02,
+        1.25
+      ],
+      "rotationYDegrees": 90.0,
+      "bounds": {
+        "min": [
+          -4.117137025296689,
+          0.02,
+          0.19362335205078096
+        ],
+        "max": [
+          -3.282862974703312,
+          2.6681719970703126,
+          2.306376647949219
+        ]
+      }
+    },
+    {
+      "file": "kitchen oven 3d model.glb",
+      "scale": [
+        2.6,
+        2.6,
+        2.6
+      ],
+      "position": [
+        3.53,
+        0.02,
+        3.22
+      ],
+      "rotationYDegrees": -90.0,
+      "bounds": {
+        "min": [
+          2.9230648028850554,
+          0.02,
+          2.5049761962890624
+        ],
+        "max": [
+          4.136935197114944,
+          2.5631884765625,
+          3.935023803710938
+        ]
+      }
+    }
+  ],
+  "wallAndSkirtingClear": true,
+  "leftShelfClearOfBackKitchen": true,
+  "rightCabinetAndOvenDoNotOverlap": true,
+  "leftShelfGapToBackKitchen": 1.6912203133106227
+}
