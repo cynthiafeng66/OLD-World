@@ -1,0 +1,44 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Hand gesture recognition</title><style>*{box-sizing:border-box}html,body{margin:0;background:#fff;color:#17212b}.sheet{width:1440px;padding:48px 56px 56px;background:#fff}h1{font:600 26px/1.4 -apple-system,BlinkMacSystemFont,sans-serif;margin:0 0 28px;color:#17212b}pre{margin:0;font:23px/1.57 Menlo,Consolas,monospace;font-variant-ligatures:none;tab-size:2;white-space:pre}.comment{color:#437044}.keyword{color:#7144a4}.number{color:#175d9b}</style><main class="sheet"><h1>Hand gesture recognition</h1><pre><span class="comment">// Prefer 3D landmarks and estimate palm length.</span>
+<span class="keyword">const</span> p = world?.length === <span class="number">21</span> ? world : landmarks;
+<span class="keyword">const</span> palm = length3(p[<span class="number">0</span>], p[<span class="number">9</span>]);
+
+<span class="keyword">let</span> extended = <span class="number">0</span>;
+<span class="keyword">const</span> vectors = [];
+
+<span class="comment">// Check the four fingers, excluding the thumb.</span>
+<span class="keyword">for</span> (<span class="keyword">const</span> root <span class="keyword">of</span> [<span class="number">5</span>, <span class="number">9</span>, <span class="number">13</span>, <span class="number">17</span>]) {
+  <span class="keyword">const</span> a = p[root], b = p[root + <span class="number">1</span>];
+  <span class="keyword">const</span> c = p[root + <span class="number">2</span>], d = p[root + <span class="number">3</span>];
+
+  <span class="keyword">const</span> reach = length3(a, d);
+  <span class="keyword">const</span> path = length3(a, b) + length3(b, c) + length3(c, d);
+
+<span class="comment">  // Count fingers that are sufficiently straight and extended.</span>
+  <span class="keyword">if</span> (
+    reach / Math.max(path, <span class="number">.0001</span>) &gt; <span class="number">.86</span> &amp;&amp;
+    reach &gt; palm * <span class="number">.5</span> &amp;&amp;
+    length3(p[<span class="number">0</span>], d) &gt; length3(p[<span class="number">0</span>], b) * <span class="number">1.12</span>
+  ) extended++;
+
+  vectors.push({
+    x: (d.x - a.x) / Math.max(reach, <span class="number">.0001</span>),
+    y: (d.y - a.y) / Math.max(reach, <span class="number">.0001</span>),
+    z: ((d.z || <span class="number">0</span>) - (a.z || <span class="number">0</span>)) / Math.max(reach, <span class="number">.0001</span>)
+  });
+}
+
+<span class="comment">// Require similar finger directions and limited fingertip separation.</span>
+<span class="keyword">const</span> parallel = vectors.slice(<span class="number">1</span>).every(v =&gt;
+  v.x * vectors[<span class="number">0</span>].x +
+  v.y * vectors[<span class="number">0</span>].y +
+  v.z * vectors[<span class="number">0</span>].z &gt; <span class="number">.72</span>
+);
+<span class="keyword">const</span> spread = length3(p[<span class="number">8</span>], p[<span class="number">20</span>]) / palm;
+<span class="keyword">if</span> (extended &lt; <span class="number">3</span> || !parallel || spread &gt; <span class="number">.95</span>) <span class="keyword">return</span> <span class="keyword">null</span>;
+
+<span class="comment">// Use the wrist as the handle and fingertips as the blade tip.</span>
+<span class="keyword">const</span> base = { x: landmarks[<span class="number">0</span>].x, y: landmarks[<span class="number">0</span>].y };
+<span class="keyword">const</span> tip = {
+  x: (landmarks[<span class="number">8</span>].x + landmarks[<span class="number">12</span>].x) / <span class="number">2</span>,
+  y: (landmarks[<span class="number">8</span>].y + landmarks[<span class="number">12</span>].y) / <span class="number">2</span>
+};</pre></main></html>

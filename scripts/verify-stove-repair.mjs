@@ -1,0 +1,13 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import crypto from 'node:crypto';
+import {decodeGLB} from '../preserve-source-glb.js';
+function load(path){const b=fs.readFileSync(path);return decodeGLB(b.buffer.slice(b.byteOffset,b.byteOffset+b.byteLength))}
+const hash=b=>crypto.createHash('sha256').update(b).digest('hex');
+function data(g,i){const a=g.json.accessors[i],v=g.json.bufferViews[a.bufferView],C={5126:Float32Array,5125:Uint32Array,5123:Uint16Array}[a.componentType],dim={SCALAR:1,VEC2:2,VEC3:3}[a.type];return new C(g.bin.buffer,g.bin.byteOffset+(v.byteOffset||0)+(a.byteOffset||0),a.count*dim)}
+const source=load('assets/models/kitchen 2 3d model.glb'),cleared=load('assets/originals/kitchen-2-stove-cleared.glb'),fixed=load('assets/models/kitchen 2 stove fixed.glb');
+const p=source.json.meshes[0].primitives[0],q=cleared.json.meshes[0].primitives[0],node=fixed.json.nodes.find(n=>n.name===source.json.nodes[0].name),r=fixed.json.meshes[node.mesh].primitives[0];
+for(const name of Object.keys(p.attributes)){const original=data(source,p.attributes[name]);assert.equal(hash(original),hash(data(cleared,q.attributes[name])));assert.equal(hash(original),hash(data(fixed,r.attributes[name])))}
+assert.deepEqual(source.json.materials,cleared.json.materials);
+const positions=data(source,p.attributes.POSITION),before=data(source,p.indices),after=data(cleared,q.indices),region=source.json.asset.extras?.stoveRepair?.region||JSON.parse(fs.readFileSync('output/stove-repair.json')).region;let cursor=0,removed=0;
+for(let i=0;i<before.length;i+=3){if(before[i]===after[cursor]&&before[i+1]===after[cursor+1]&&before[i+2]===after[cursor+2]){cursor+=3;continue}let x=0,y=0,z=0;for(let k=0;k<3;k++){const o=before[i+k]*3;x+=positions[o]/3;y+=positions[o+1]/3;z+=positions[o+2]/3}assert(x>region.minX&&x<region.maxX&&z>region.minZ&&z<region.maxZ&&y>region.minY&&y<region.maxY,'A face outside the stove repair region was removed');removed++}assert.equal(cursor,after.length);
+const imageHashes=g=>g.json.images.map(im=>{const v=g.json.bufferViews[im.bufferView];return hash(g.bin.subarray(v.byteOffset||0,(v.byteOffset||0)+v.byteLength))});assert.deepEqual(imageHashes(source),imageHashes(cleared));assert.deepEqual(imageHashes(source),imageHashes(fixed));
+const report={passed:true,removedTriangles:removed,removedFacesConfinedToStove:true,cabinetCounterHoodPositionsNormalsUVByteIdentical:true,originalMaterialDefinitionsPreserved:true,originalTextureImagesByteIdentical:true,completeStandaloneModel:true};fs.writeFileSync('output/stove-source-validation.json',JSON.stringify(report,null,2));console.log(report);

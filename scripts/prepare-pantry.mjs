@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import {load,save,displayLOD} from './model-display-utils.mjs';
+const report=[];
+const plate=load('assets/models/white ceramic bowl 3d model.glb');
+const node=plate.json.nodes[0],scale=.29/.97998046875;
+plate.json.nodes=Array.from({length:7},(_,i)=>({...node,name:`White_plate_${i+1}`,translation:[-.24+i*.08,.145,0],rotation:[0,0,-Math.SQRT1_2,Math.SQRT1_2],scale:[scale,scale,scale]}));
+plate.json.scenes=[{nodes:[0,1,2,3,4,5,6]}];plate.json.scene=0;
+plate.json.asset.extras={source:'white ceramic bowl 3d model.glb',arrangement:'Seven upright plates; source mesh, UVs, materials and images unchanged'};
+save('assets/models/rack-plates.glb',plate);report.push(displayLOD(plate,'assets/parts/rack-plates-display.glb'));
+for(const [source,out] of [['cloth sack','flour-sack'],['rice bag','rice-bag'],['bread pasta packaging','bread-pasta']])report.push(displayLOD(load('assets/models/'+source+' 3d model.glb'),'assets/parts/'+out+'-display.glb'));
+fs.writeFileSync('output/pantry-assets.json',JSON.stringify(report,null,2));console.log(report);

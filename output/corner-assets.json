@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "source": "kitchen 1 3d model.glb",
+  "output": "assets/models/kitchen-corner-completion.glb",
+  "originalMaterialsAndImageBytesUnchanged": true,
+  "cornerBounds": [
+    3.116,
+    4.22
+  ],
+  "cabinetTriangles": 185903,
+  "tileTriangles": 75914,
+  "bridgeTriangles": 10462,
+  "tileLimits": {
+    "x": 4.075,
+    "zMin": -3.43,
+    "zMax": -1.415,
+    "yMin": 0.992,
+    "yMax": 1.305
+  }
+}

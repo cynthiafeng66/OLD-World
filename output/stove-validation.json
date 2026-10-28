@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "details": {
+    "caps": 4,
+    "arms": 16,
+    "knobs": 0,
+    "parts": 7,
+    "scale": [
+      4,
+      4,
+      4
+    ]
+  },
+  "checks": [
+    "four circular burner caps in two rows",
+    "sixteen cast iron supports",
+    "board 4 cm from window-side table edge",
+    "no hob controls",
+    "seven room groups and original kitchen scale",
+    "clean page load",
+    "full room GLB exported"
+  ],
+  "errors": []
+}

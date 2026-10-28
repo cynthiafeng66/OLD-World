@@ -1,6 +1,6 @@
 {
   "source_directory": "/Users/cynthiafeng/Desktop/旧世界",
-  "source_count": 10,
+  "source_count": 11,
   "models": [
     {
       "file": "kitchen oven 3d model.glb",
@@ -70,6 +70,13 @@
     {
       "file": "dough balls 3d model.glb",
       "bytes": 66759208,
+      "meshes": 1,
+      "nodes": 1,
+      "animations": 0
+    },
+    {
+      "file": "cutting board 3d model.glb",
+      "bytes": 59222712,
       "meshes": 1,
       "nodes": 1,
       "animations": 0

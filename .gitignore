@@ -7,3 +7,5 @@ playwright-report/
 output/contact.html
 output/contact.png
 output/model-[0-9]*.png
+
+_site/

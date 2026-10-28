@@ -1,0 +1,122 @@
+{
+  "passed": true,
+  "references": [
+    {
+      "reference": 1,
+      "expected": "dough",
+      "action": "dough",
+      "active": true,
+      "handCount": 1,
+      "actions": [
+        "dough",
+        "dough",
+        "dough",
+        "dough",
+        "dough",
+        "dough",
+        "dough",
+        "dough",
+        "dough",
+        "dough"
+      ],
+      "mirroredDimmed": true
+    },
+    {
+      "reference": 2,
+      "expected": "knife",
+      "action": "knife",
+      "active": true,
+      "handCount": 1,
+      "actions": [
+        "knife",
+        "knife",
+        "knife",
+        "knife",
+        "knife",
+        "knife",
+        "knife",
+        "knife",
+        "knife",
+        "knife"
+      ],
+      "mirroredDimmed": true
+    },
+    {
+      "reference": 3,
+      "expected": "knife",
+      "action": "knife",
+      "active": true,
+      "handCount": 1,
+      "actions": [
+        "knife",
+        "knife",
+        "knife",
+        "knife",
+        "knife",
+        "knife",
+        "knife",
+        "knife",
+        "knife",
+        "knife"
+      ],
+      "mirroredDimmed": true
+    },
+    {
+      "reference": 4,
+      "expected": "explore",
+      "action": "explore",
+      "active": true,
+      "handCount": 1,
+      "actions": [
+        "explore",
+        "explore",
+        "explore",
+        "explore",
+        "explore",
+        "explore",
+        "explore",
+        "explore",
+        "explore",
+        "explore"
+      ],
+      "mirroredDimmed": true
+    },
+    {
+      "reference": 5,
+      "expected": "bread",
+      "action": "bread",
+      "active": true,
+      "handCount": 1,
+      "actions": [
+        "bread",
+        "bread",
+        "bread",
+        "bread",
+        "bread",
+        "bread",
+        "bread",
+        "bread",
+        "bread",
+        "bread"
+      ],
+      "mirroredDimmed": true
+    }
+  ],
+  "lossStopsInput": true,
+  "combinedFistAndObject": [
+    "knife",
+    "knife",
+    "knife",
+    "knife",
+    "knife",
+    "knife",
+    "knife",
+    "knife",
+    "knife",
+    "knife",
+    "knife",
+    "knife"
+  ],
+  "remoteRequests": [],
+  "errors": []
+}

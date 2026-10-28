@@ -2,7 +2,9 @@
 
 双击 **启动厨房.command**，或打开 http://127.0.0.1:8766/ 。预览使用本机文件，运行时不访问外网。
 
-本轮按用户要求将 kitchen 2、左侧木柜和烤箱高柜也恢复为完整原始模型，原始几何、UV、材质与贴图不变，只调整等比例尺寸、整体位置和朝向。以下保留此前已完成的窗户修订：
+已加入**摄像头控刀**：右侧点击「开启摄像头」，四指并拢伸直可控制虚拟刀；识别纸板刀、玩具刀或长条道具时，先移开手和道具，点击「采集空背景」后再放入。刀柄跟随位置、刀尖跟随方向，并显示挥动轨迹。详见 [控刀代码与使用说明](knife-control/README.md)。道具识别基于长条轮廓，需固定镜头及对比明显的背景；当前输出二维轨迹，尚未添加砍切玩法。
+
+Kitchen 2 现已按本轮请求修正灶台局部，见末尾“灶台局部修正”；其余部位保留原始数据。此前按用户要求将 kitchen 2、左侧木柜和烤箱高柜也恢复为完整原始模型，原始几何、UV、材质与贴图不变，只调整等比例尺寸、整体位置和朝向。以下保留此前已完成的窗户修订：
 
 - 左侧木柜绕 Y 轴旋转 90°，背面靠左墙，开口朝房间内部。已检查墙面、踢脚线、后排厨房和中央桌子的间距，无交叠。
 - 从 `assets/models/table 3d model.glb` 工作模型中删除附带的窗户，仅保留木桌；剩余顶点、UV、法线、原始贴图均保留。修改前备份位于 `assets/originals/table-with-window-original.glb`，桌面原件未改动。
@@ -50,3 +52,35 @@ python3 -m http.server 8766 --bind 127.0.0.1
 打开 http://127.0.0.1:8766/ 。macOS 也可以双击 `启动厨房.command`。
 
 Three.js 和模型加载器已随项目放入 `vendor/`，运行预览不需要 npm 安装。`output/warm-kitchen.glb` 是当前整屋模型；左侧木柜已沿左墙向前挪动，与冰箱拉开距离。模型、贴图和原始备份都在 `assets/` 中。
+
+
+## 灶台局部修正
+
+Kitchen 2 已修正原网格中变形的炉架、方块部件、裸露管件和红色阀门，替换为双炉头、铸铁四向锅架、黑色圆角灶面，不带旋钮；炉头已前移到靠近台面前沿的位置。只裁掉灶台上方指定区域的旧三角面；橱柜、木台面、防溅墙砖及抽油烟机的原始顶点、UV、法线、材质和贴图图像数据保留。原始 `assets/models/kitchen 2 3d model.glb` 仍保留。
+
+当前场景直接加载完整的 `assets/models/kitchen 2 stove fixed.glb`；`output/kitchen-2-repaired.glb` 是相同的独立 kitchen 2 模型，包含修正后的灶台，可直接导入三维软件。`output/warm-kitchen.glb` 已同步。
+
+`stove.js` 生成新的炉头、锅架和灶面。先运行 `node scripts/repair-stove.mjs`，再运行 `node scripts/build-repaired-stove.mjs` 可重新生成修正模型；中间文件 `assets/originals/kitchen-2-stove-cleared.glb` 只用于构建。
+
+`output/stove-closeup.png` 为近景，`output/stove-validation.json` 为页面与导出验证，`output/stove-repair.json` 记录了旧网格裁切区域。
+
+
+## Prep table and English interface
+
+The original white cutting board (`cutting board 3d model.glb`) is now on the front-center of the wooden worktable, using its original proportions and textures. The hob has no knobs or buttons, and both burners are closer to the front edge for easier reach.
+
+All in-game interface text is English, including the room editor, loading states, errors, layout dialogs, camera controls, calibration messages and tracking overlays. The exported room includes the cutting board and the updated hob.
+
+`output/prep-layout-validation.json` checks board support and table bounds, burner reach and English UI text; `output/knife-input-validation.json` checks simulated camera states and mobile controls.
+
+## Corner completion
+
+The gap between the sink run and hob run is filled with a corner cabinet, a solid wooden counter closure and green tiles returning along the right wall. Added faces reuse the original kitchen atlas and materials; existing furniture geometry, placement, proportions and textures are unchanged. `scripts/prepare-corner.mjs` builds `assets/models/kitchen-corner-completion.glb`. The new part is included in editing, layouts and full-room GLB export.
+
+## Clean game interface
+
+Loading messages and camera controls are in English. The top-left branding, reference overlay, bottom navigation/actions and navigation hint have been removed. The camera panel uses translucent white glass with dark text. Room navigation still works through mouse/touch OrbitControls; `window.kitchen.exportRoom()` remains available for development exports.
+
+## Live website
+
+[Open Old World Kitchen](https://cynthiafeng66.github.io/OLD-World/). Pushing to `main` deploys through `.github/workflows/pages.yml`. The workflow fetches the runtime models from Git LFS and packages their actual bytes with `scripts/build-pages.py`; source backups, full-room exports and private local reference photos are not included in the hosted site. Original model textures are copied without conversion.

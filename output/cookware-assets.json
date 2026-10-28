@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "sourceFacesPartitionedWithoutLoss": true,
+  "parts": [
+    {
+      "name": "frying-pan",
+      "sourceTriangles": 894732,
+      "center": [
+        -0.26042937859892845,
+        0,
+        0.11333467066287994
+      ],
+      "displayTriangles": 49210,
+      "sourceGeometryNormalsUVsAndTextureImagesUnchanged": true
+    },
+    {
+      "name": "stockpot",
+      "sourceTriangles": 1000894,
+      "center": [
+        0.2633514404296875,
+        0.0001983940601348877,
+        0.0645408183336258
+      ],
+      "displayTriangles": 55048,
+      "sourceGeometryNormalsUVsAndTextureImagesUnchanged": true
+    }
+  ]
+}

@@ -83,6 +83,20 @@
         3.34,
         0.12
       ]
+    },
+    {
+      "name": "White cutting board",
+      "asset": "native-cutting-board",
+      "position": [
+        0.1,
+        0.959737060546875,
+        1.05
+      ],
+      "scale": [
+        1.25,
+        1.25,
+        1.25
+      ]
     }
   ],
   "triangles": 9316800,
@@ -93,7 +107,13 @@
     "part editing and restore",
     "original model scale stays uniform",
     "reference toggle",
-    "GLB export"
+    "GLB export",
+    "white cutting board inside tabletop bounds",
+    "hob knobs removed",
+    "burners moved toward front edge",
+    "English interface, camera controls and permission messages",
+    "updated full GLB export includes original cutting board"
   ],
-  "lastLayoutChange": "Left shelf moved forward 1.13 scene units; scale, rotation, geometry and textures unchanged"
+  "lastLayoutChange": "Left shelf moved forward 1.13 scene units; scale, rotation, geometry and textures unchanged",
+  "lastUpdate": "Prep board, knob-free hob, reachable burners and English game text; see prep-layout-validation.json and stove-validation.json for current scene data."
 }

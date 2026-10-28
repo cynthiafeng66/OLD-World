@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "sourceTriangles": 1913824,
+  "retainedTriangles": 1830150,
+  "removedTowel": {
+    "id": 986859,
+    "triangles": 83674,
+    "min": [
+      0.3715667724609375,
+      0.0013885870575904846,
+      -0.060363829135894775
+    ],
+    "max": [
+      0.4899749755859375,
+      0.02650456130504608,
+      0.19526666402816772
+    ]
+  },
+  "retainedComponents": 6,
+  "retainedGeometryNormalsUVsAndTexturesUnchanged": true,
+  "displayTriangles": 105048
+}

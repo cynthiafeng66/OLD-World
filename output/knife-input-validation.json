@@ -1,0 +1,221 @@
+{
+  "passed": true,
+  "checks": [
+    "fifteen scene groups including corner cabinet",
+    "permission rejection and retry",
+    "local MediaPipe worker loads and infers",
+    "synthetic camera background capture",
+    "elongated object acquisition",
+    "3D knife tip projection",
+    "position and rotation following",
+    "mirrored movement and continuous sweep",
+    "manual tip reversal",
+    "loss clears input and knife",
+    "hand-only mode rejects toy rectangle",
+    "camera tracks released",
+    "title, reference and bottom toolbar removed",
+    "English loading and interface",
+    "translucent white camera panel",
+    "unchanged room model placement",
+    "knife excluded from room export group",
+    "collapse and mobile panel",
+    "no remote requests",
+    "no page errors",
+    "all four English recognition labels",
+    "object, dough and fist feedback",
+    "non-knife gestures never emit active knife input",
+    "free room camera preserved"
+  ],
+  "first": {
+    "active": true,
+    "visible": true,
+    "pose": {
+      "action": "knife",
+      "source": "object",
+      "base": {
+        "x": 0.501953125,
+        "y": 0.7542708333333333
+      },
+      "tip": {
+        "x": 0.501953125,
+        "y": 0.140625
+      },
+      "box": {
+        "x": 0.46484375,
+        "y": 0.140625,
+        "right": 0.53125,
+        "bottom": 0.8541666666666666
+      },
+      "aspect": 7.666666666666663,
+      "confidence": 0.9499999999999998
+    },
+    "speed": 0,
+    "angle": 1.5707963267948966,
+    "sweep": null,
+    "trail": [
+      {
+        "x": 0.501953125,
+        "y": 0.140625,
+        "time": 9716.700000047684
+      }
+    ],
+    "timestamp": 9716.700000047684
+  },
+  "moving": {
+    "active": true,
+    "visible": true,
+    "pose": {
+      "action": "knife",
+      "source": "object",
+      "base": {
+        "x": 0.5116549610042372,
+        "y": 0.7361726857979397
+      },
+      "tip": {
+        "x": 0.32290029880192367,
+        "y": 0.16576131602137995
+      },
+      "box": {
+        "x": 0.42578125,
+        "y": 0.15104166666666666,
+        "right": 0.7109375,
+        "bottom": 0.84375
+      },
+      "aspect": 7.197470636414061,
+      "confidence": 0.933335682298977
+    },
+    "speed": 5.331085531083828,
+    "angle": 2.031531363263452,
+    "sweep": {
+      "from": {
+        "x": 0.501953125,
+        "y": 0.140625
+      },
+      "to": {
+        "x": 0.32290029880192367,
+        "y": 0.16576131602137995
+      }
+    },
+    "trail": [
+      {
+        "x": 0.501953125,
+        "y": 0.140625,
+        "time": 9716.700000047684
+      },
+      {
+        "x": 0.501953125,
+        "y": 0.140625,
+        "time": 9765.600000023842
+      },
+      {
+        "x": 0.32290029880192367,
+        "y": 0.16576131602137995,
+        "time": 9816.200000047684
+      }
+    ],
+    "timestamp": 9816.200000047684
+  },
+  "projection": {
+    "x": 0.501953125,
+    "y": 0.14062500000000028,
+    "target": {
+      "x": 0.501953125,
+      "y": 0.140625
+    }
+  },
+  "actionResults": {
+    "results": [
+      {
+        "action": "dough",
+        "label": "Dough",
+        "knife": false,
+        "dough": true,
+        "knifeInput": false,
+        "roomAction": "dough"
+      },
+      {
+        "action": "bread",
+        "label": "Make bread",
+        "knife": false,
+        "dough": true,
+        "knifeInput": false,
+        "roomAction": "bread"
+      },
+      {
+        "action": "explore",
+        "label": "Free exploration",
+        "knife": false,
+        "dough": false,
+        "knifeInput": false,
+        "roomAction": "explore"
+      },
+      {
+        "action": "knife",
+        "label": "Knife",
+        "knife": true,
+        "dough": false,
+        "knifeInput": true,
+        "roomAction": "knife"
+      }
+    ],
+    "before": {
+      "position": [
+        0.05000000000000004,
+        2.3500000000000005,
+        6.200000000000005
+      ],
+      "target": [
+        0,
+        1.15,
+        -0.9
+      ]
+    },
+    "after": {
+      "position": [
+        0.05000000000000004,
+        2.3500000000000005,
+        6.200000000000005
+      ],
+      "target": [
+        0,
+        1.15,
+        -0.9
+      ]
+    },
+    "controlsEnabled": true
+  },
+  "cleanUI": {
+    "removed": true,
+    "english": true,
+    "loadingMessages": [
+      "Loading your kitchen\n\nPreparing models and textures…",
+      "Loading your kitchen\n\nLoading original model · Kitchen 1 · Inset window",
+      "Loading your kitchen\n\nLoading original model · Kitchen 2 · Repaired hob",
+      "Loading your kitchen\n\nLoading original model · Left shelf · Original proportions",
+      "Loading your kitchen\n\nLoading original model · Oven cabinet · Original proportions",
+      "Loading your kitchen\n\n1 / 2 · Central worktable",
+      "Loading your kitchen\n\n2 / 2 · Wooden floor",
+      "Loading your kitchen\n\nLoading original model · White cutting board",
+      "Loading your kitchen\n\nLoading original model · White plates · Seven in rack",
+      "Loading your kitchen\n\nLoading original model · Flour sack",
+      "Loading your kitchen\n\nLoading original model · Rice bag",
+      "Loading your kitchen\n\nLoading original model · Bread and pasta",
+      "Loading your kitchen\n\nLoading original model · Frying pan",
+      "Loading your kitchen\n\nLoading original model · Stockpot",
+      "Loading your kitchen\n\nLoading original model · Baking set · Towel removed",
+      "Loading your kitchen\n\nLoading original model · Corner cabinet and tile return"
+    ],
+    "background": "rgba(255, 255, 255, 0.7)",
+    "blur": "blur(18px)"
+  },
+  "errors": [],
+  "remoteRequests": [],
+  "modelWarnings": [
+    "sigmaRadians, 0.06, is too large and will clip, as it requested 30 samples when the maximum is set to 20",
+    "sigmaRadians, 0.06, is too large and will clip, as it requested 30 samples when the maximum is set to 20",
+    "W1027 08:43:36.466000 1922656 gl_context.cc:1072] OpenGL error checking is disabled",
+    "W1027 08:43:36.694000 1922656 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.",
+    "W1027 08:43:36.716000 1922656 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.",
+    "W1027 08:43:36.796000 1922656 landmark_projection_calculator.cc:189] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX."
+  ]
+}

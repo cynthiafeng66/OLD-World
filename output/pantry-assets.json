@@ -1,0 +1,26 @@
+[
+  {
+    "file": "assets/parts/rack-plates-display.glb",
+    "originalTriangles": 1995988,
+    "displayTriangles": 109778,
+    "textureImagesCopiedVerbatim": true
+  },
+  {
+    "file": "assets/parts/flour-sack-display.glb",
+    "originalTriangles": 1906772,
+    "displayTriangles": 104870,
+    "textureImagesCopiedVerbatim": true
+  },
+  {
+    "file": "assets/parts/rice-bag-display.glb",
+    "originalTriangles": 1961678,
+    "displayTriangles": 107890,
+    "textureImagesCopiedVerbatim": true
+  },
+  {
+    "file": "assets/parts/bread-pasta-display.glb",
+    "originalTriangles": 1908131,
+    "displayTriangles": 104947,
+    "textureImagesCopiedVerbatim": true
+  }
+]

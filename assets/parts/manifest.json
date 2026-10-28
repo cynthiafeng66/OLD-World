@@ -1,9 +1,11 @@
 [
   {
     "name": "native-kitchen-1",
-    "file": "../models/kitchen 1 3d model.glb",
+    "file": "../models/kitchen-1-window-inset.glb",
     "source": "kitchen 1 3d model.glb",
-    "original_unmodified": true
+    "original_unmodified": false,
+    "textures_preserved": true,
+    "repair": "Window raised and inset; green tile infill below; original cabinet geometry retained"
   },
   {
     "name": "dough-balls",
@@ -228,9 +230,11 @@
   },
   {
     "name": "native-kitchen-2",
-    "file": "../models/kitchen 2 3d model.glb",
+    "file": "../models/kitchen 2 stove fixed.glb",
     "source": "kitchen 2 3d model.glb",
-    "original_unmodified": true
+    "original_unmodified": false,
+    "textures_preserved": true,
+    "repair": "Only stove region; cabinet, worktop and range hood preserved"
   },
   {
     "name": "native-wooden-shelf",
@@ -243,5 +247,68 @@
     "file": "../models/kitchen oven 3d model.glb",
     "source": "kitchen oven 3d model.glb",
     "original_unmodified": true
+  },
+  {
+    "name": "native-cutting-board",
+    "file": "../models/cutting board 3d model.glb",
+    "source": "cutting board 3d model.glb",
+    "original_unmodified": true
+  },
+  {
+    "name": "native-rack-plates",
+    "file": "../models/rack-plates.glb",
+    "source": "white ceramic bowl 3d model.glb",
+    "display": "rack-plates-display.glb",
+    "textures_preserved": true,
+    "original_geometry_on_export": true
+  },
+  {
+    "name": "native-flour-sack",
+    "file": "../models/cloth sack 3d model.glb",
+    "source": "cloth sack 3d model.glb",
+    "display": "flour-sack-display.glb",
+    "textures_preserved": true,
+    "original_geometry_on_export": true
+  },
+  {
+    "name": "native-rice-bag",
+    "file": "../models/rice bag 3d model.glb",
+    "source": "rice bag 3d model.glb",
+    "display": "rice-bag-display.glb",
+    "textures_preserved": true,
+    "original_geometry_on_export": true
+  },
+  {
+    "name": "native-bread-pasta",
+    "file": "../models/bread pasta packaging 3d model.glb",
+    "source": "bread pasta packaging 3d model.glb",
+    "display": "bread-pasta-display.glb",
+    "textures_preserved": true,
+    "original_geometry_on_export": true
+  },
+  {
+    "name": "native-frying-pan",
+    "file": "../models/frying-pan.glb",
+    "source": "cookware 3d model.glb",
+    "display": "frying-pan-display.glb",
+    "textures_preserved": true,
+    "original_geometry_on_export": true
+  },
+  {
+    "name": "native-stockpot",
+    "file": "../models/stockpot.glb",
+    "source": "cookware 3d model.glb",
+    "display": "stockpot-display.glb",
+    "textures_preserved": true,
+    "original_geometry_on_export": true
+  },
+  {
+    "name": "native-baking-set",
+    "file": "../models/baking-set-no-towel.glb",
+    "source": "kitchen baking set 3d model.glb",
+    "display": "baking-set-no-towel-display.glb",
+    "towel_removed": true,
+    "textures_preserved": true,
+    "original_geometry_on_export": true
   }
 ]

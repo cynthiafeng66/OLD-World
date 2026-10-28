@@ -1,0 +1,10 @@
+import fs from 'node:fs';import {register} from 'node:module';
+import {decodeGLB,encodeGLB,preserveSource} from '../preserve-source-glb.js';
+register('./vendor-loader.mjs',import.meta.url);
+const T=await import('three'),{GLTFExporter}=await import('three/addons/exporters/GLTFExporter.js'),{createRepairedStove}=await import('../stove.js');
+globalThis.FileReader=class{readAsArrayBuffer(blob){blob.arrayBuffer().then(result=>{this.result=result;this.onloadend?.();this.onload?.()}).catch(e=>this.onerror?.(e))}};
+const root=new T.Group();root.name='Kitchen_2_Stove_Repair';root.userData={asset:'native-kitchen-2',stoveRepair:true};root.add(createRepairedStove());
+const clean=fs.readFileSync('assets/originals/kitchen-2-stove-cleared.glb');const source=clean.buffer.slice(clean.byteOffset,clean.byteOffset+clean.byteLength);
+const generated=await new GLTFExporter().parseAsync(root,{binary:true});const complete=preserveSource(generated,source,'native-kitchen-2');
+const parsed=decodeGLB(complete);parsed.json.asset.extras={stoveRepair:decodeGLB(source).json.asset.extras.stoveRepair};const bytes=Buffer.from(encodeGLB(parsed.json,parsed.bin));
+fs.writeFileSync('assets/models/kitchen 2 stove fixed.glb',bytes);fs.writeFileSync('output/kitchen-2-repaired.glb',bytes);console.log('Corrected standalone kitchen 2:',bytes.length,'bytes');

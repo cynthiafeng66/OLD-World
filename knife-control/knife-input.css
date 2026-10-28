@@ -1,0 +1,31 @@
+#knife-input{position:fixed;right:24px;bottom:24px;width:292px;padding:14px;background:rgba(255,255,255,.70);border:1px solid rgba(255,255,255,.76);border-radius:14px;box-shadow:0 8px 32px #23312616;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);z-index:12;max-height:calc(100dvh - 48px);overflow:auto;color:#2b362e;font-size:12px;color-scheme:light}
+#knife-input .knife-heading{display:flex;align-items:center;justify-content:space-between;gap:12px}
+#knife-input h2{margin:0;font-size:14px;letter-spacing:.5px;font-weight:600}
+#knife-input button{font-size:11px;padding:8px 10px;background:#ffffff80;border:1px solid #344a3826;color:#304335;transition:background .15s}
+#knife-input button:hover{background:#ffffffd9}
+#knife-input button:focus-visible,#knife-input select:focus-visible{outline:2px solid #526d55;outline-offset:2px}
+#knife-input #knife-collapse{border:0;background:transparent}
+#knife-input .knife-intro{line-height:1.6;color:#4c5a50;margin:8px 0 10px}
+.knife-preview{position:relative;border-radius:8px;overflow:hidden;background:#ffffff30;border:1px solid #ffffff80}
+#knife-preview{width:100%;height:auto;max-height:28dvh;object-fit:contain}
+#knife-badge{position:absolute;left:7px;bottom:7px;background:#ffffffd9;color:#35473a;border:1px solid #ffffffa6;border-radius:4px;padding:4px 6px;font-size:10px}
+#knife-action{font-size:17px;font-weight:600;padding:10px 0 2px;color:#354e3b}
+#knife-input[data-action="explore"] #knife-action{color:#31593c}
+#knife-input[data-action="knife"] #knife-action{color:#35566b}
+#knife-message{min-height:36px;line-height:1.6;color:#425543;margin:10px 0}
+.knife-row{display:flex;gap:7px;align-items:center}
+.knife-row>button{flex:1}
+#knife-input .primary{background:#52684ed9;border-color:#52684e;color:#fff}
+#knife-input .primary:hover{background:#445c42}
+#knife-input button:disabled{opacity:.45;cursor:default}
+.knife-label{display:block;margin:12px 0 10px;color:#4c5c50;font-size:10px}
+.knife-label select{display:block;margin-top:5px;font-size:11px;background:#ffffff66;border:1px solid #344a3826;color:#304335}
+.knife-threshold{display:flex;align-items:center;gap:5px;font-size:10px;flex:1;white-space:nowrap}
+.knife-threshold input{width:65px;accent-color:#52684e}
+.knife-threshold output{width:15px}
+#knife-flip{flex:0 0 auto}
+#knife-input #knife-flip[aria-pressed=true]{background:#52684ed9;color:#fff}
+#knife-input .knife-footnote{color:#566359;font-size:10px;line-height:1.6;margin:12px 0 0}
+#knife-trail{position:fixed;inset:0;pointer-events:none;z-index:4;width:100vw;height:100vh}
+#knife-input [hidden]{display:none!important}
+@media(max-width:650px){#knife-input{right:12px;bottom:12px;width:244px;padding:11px;max-height:calc(100dvh - 24px)}#knife-input .knife-intro{font-size:11px}#knife-message{font-size:11px}.knife-threshold input{width:45px}}

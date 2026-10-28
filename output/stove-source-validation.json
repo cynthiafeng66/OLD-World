@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "removedTriangles": 210698,
+  "removedFacesConfinedToStove": true,
+  "cabinetCounterHoodPositionsNormalsUVByteIdentical": true,
+  "originalMaterialDefinitionsPreserved": true,
+  "originalTextureImagesByteIdentical": true,
+  "completeStandaloneModel": true
+}

@@ -1,10 +1,13 @@
 {
+  "cornerGeometryUVsAndOriginalTexturesVerified": true,
+  "insetWindowAndTileInfillVerified": true,
   "allOriginalModelGroupsUseUniformScale": true,
   "originalModels": [
     {
       "file": "kitchen 1 3d model.glb",
       "sourceSHA256": "250487a301ca1a9f708817c925be83ba697568f793e820bb2c86efada2d0a50b",
       "sourceUnchanged": true,
+      "geometryComparedTo": "kitchen-1-window-inset.glb",
       "exportedGeometryUVNormalsAndIndicesByteIdentical": true,
       "exportedTextureImagesByteIdentical": true
     },
@@ -12,6 +15,7 @@
       "file": "kitchen 2 3d model.glb",
       "sourceSHA256": "d78eb5aa8a17c092a37bb4ff92c9f207cf94f7ac9e6e5a77943ac90bc9165f4b",
       "sourceUnchanged": true,
+      "geometryComparedTo": "kitchen 2 stove fixed.glb",
       "exportedGeometryUVNormalsAndIndicesByteIdentical": true,
       "exportedTextureImagesByteIdentical": true
     },
@@ -19,6 +23,7 @@
       "file": "wooden shelf 3d model.glb",
       "sourceSHA256": "069ed23552b916b421f311bcc5e4e6f71eff9bb6c457fbd6dcecd58b2b164d28",
       "sourceUnchanged": true,
+      "geometryComparedTo": "wooden shelf 3d model.glb",
       "exportedGeometryUVNormalsAndIndicesByteIdentical": true,
       "exportedTextureImagesByteIdentical": true
     },
@@ -26,6 +31,64 @@
       "file": "kitchen oven 3d model.glb",
       "sourceSHA256": "eabc136b17c867d6139468deabadd5f6649310a58471c0d81086f91245f3d882",
       "sourceUnchanged": true,
+      "geometryComparedTo": "kitchen oven 3d model.glb",
+      "exportedGeometryUVNormalsAndIndicesByteIdentical": true,
+      "exportedTextureImagesByteIdentical": true
+    },
+    {
+      "file": "cutting board 3d model.glb",
+      "sourceSHA256": "1b15a604d340de2b9a0fbb204791bc9f58417a89db142809fe20b420af38637c",
+      "sourceUnchanged": true,
+      "geometryComparedTo": "cutting board 3d model.glb",
+      "exportedGeometryUVNormalsAndIndicesByteIdentical": true,
+      "exportedTextureImagesByteIdentical": true
+    },
+    {
+      "file": "cloth sack 3d model.glb",
+      "sourceSHA256": "89985836e6a6945cef4d6dbf6a1b17911e96da82c4982156e17398ca46c8364e",
+      "sourceUnchanged": true,
+      "geometryComparedTo": "cloth sack 3d model.glb",
+      "exportedGeometryUVNormalsAndIndicesByteIdentical": true,
+      "exportedTextureImagesByteIdentical": true
+    },
+    {
+      "file": "rice bag 3d model.glb",
+      "sourceSHA256": "b3c7ffa314c1832d7bc9ebafbe82b221699dc208d70f49d2fcf9bbc03908df3c",
+      "sourceUnchanged": true,
+      "geometryComparedTo": "rice bag 3d model.glb",
+      "exportedGeometryUVNormalsAndIndicesByteIdentical": true,
+      "exportedTextureImagesByteIdentical": true
+    },
+    {
+      "file": "bread pasta packaging 3d model.glb",
+      "sourceSHA256": "a578952b9484626d3845e532385b93e7991a99ff4a1b742063dcaaccde8af26f",
+      "sourceUnchanged": true,
+      "geometryComparedTo": "bread pasta packaging 3d model.glb",
+      "exportedGeometryUVNormalsAndIndicesByteIdentical": true,
+      "exportedTextureImagesByteIdentical": true
+    },
+    {
+      "file": "white ceramic bowl 3d model.glb",
+      "uprightCopies": 7,
+      "sourceUnchanged": true,
+      "exportedGeometryUVNormalsAndIndicesByteIdentical": true,
+      "exportedTextureImagesByteIdentical": true
+    },
+    {
+      "file": "cookware 3d model.glb",
+      "sourceUnchanged": true,
+      "splitInto": [
+        "frying-pan",
+        "stockpot"
+      ],
+      "sourceFacesPartitionedWithoutLoss": true,
+      "exportedGeometryUVNormalsAndIndicesByteIdentical": true,
+      "exportedTextureImagesByteIdentical": true
+    },
+    {
+      "file": "kitchen baking set 3d model.glb",
+      "originalSourceUnchanged": true,
+      "onlyRightTowelRemoved": true,
       "exportedGeometryUVNormalsAndIndicesByteIdentical": true,
       "exportedTextureImagesByteIdentical": true
     }

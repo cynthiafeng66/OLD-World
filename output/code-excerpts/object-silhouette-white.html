@@ -1,0 +1,33 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Object silhouette recognition</title><style>*{box-sizing:border-box}html,body{margin:0;background:#fff;color:#17212b}.sheet{width:1440px;padding:48px 56px 56px;background:#fff}h1{font:600 26px/1.4 -apple-system,BlinkMacSystemFont,sans-serif;margin:0 0 28px;color:#17212b}pre{margin:0;font:23px/1.57 Menlo,Consolas,monospace;font-variant-ligatures:none;tab-size:2;white-space:pre}.comment{color:#437044}.keyword{color:#7144a4}.number{color:#175d9b}</style><main class="sheet"><h1>Object silhouette recognition</h1><pre><span class="comment">// Extract foreground pixels and compensate for exposure changes.</span>
+<span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; w * h; i++) {
+  <span class="keyword">const</span> j = i * <span class="number">4</span>;
+  <span class="keyword">const</span> difference = (
+    Math.abs(rgba[j]     - bg[j]     - shift) +
+    Math.abs(rgba[j + <span class="number">1</span>] - bg[j + <span class="number">1</span>] - shift) +
+    Math.abs(rgba[j + <span class="number">2</span>] - bg[j + <span class="number">2</span>] - shift)
+  ) / <span class="number">3</span>;
+
+  mask[i] = difference &gt; threshold ? <span class="number">1</span> : <span class="number">0</span>;
+}
+
+<span class="comment">// Connected-component extraction and principal-axis analysis are omitted.</span>
+<span class="keyword">const</span> long = hi - lo;
+<span class="keyword">const</span> short = sideHi - sideLo;
+<span class="keyword">const</span> aspect = long / Math.max(<span class="number">1</span>, short);
+<span class="keyword">const</span> fill = count / Math.max(<span class="number">1</span>, long * short);
+
+<span class="comment">// Reject components that do not resemble elongated objects.</span>
+<span class="keyword">if</span> (
+  aspect &lt; <span class="number">2.35</span> || aspect &gt; <span class="number">20</span> ||
+  long &lt; h * <span class="number">.17</span> || short &lt; <span class="number">3</span> || fill &lt; <span class="number">.24</span>
+) <span class="keyword">continue</span>;
+
+<span class="comment">// Calculate the two endpoints of the object's principal axis.</span>
+<span class="keyword">const</span> a = {
+  x: (cx + vx * lo) / w,
+  y: (cy + vy * lo) / h
+};
+<span class="keyword">const</span> b = {
+  x: (cx + vx * hi) / w,
+  y: (cy + vy * hi) / h
+};</pre></main></html>

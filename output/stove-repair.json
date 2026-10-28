@@ -1,0 +1,16 @@
+{
+  "source": "assets/models/kitchen 2 3d model.glb",
+  "corrected": "assets/originals/kitchen-2-stove-cleared.glb",
+  "originalTriangles": 1897653,
+  "retainedTriangles": 1686955,
+  "removedTriangles": 210698,
+  "region": {
+    "minX": -0.212,
+    "maxX": 0.059,
+    "minZ": -0.138,
+    "maxZ": 0.176,
+    "minY": 0.2125,
+    "maxY": 0.3
+  },
+  "originalAttributeAndTextureBytesPreserved": true
+}
