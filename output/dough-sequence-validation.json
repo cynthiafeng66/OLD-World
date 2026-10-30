@@ -260,7 +260,14 @@
   ],
   "oneStepPerPress": true,
   "heldKeyIgnored": true,
-  "lastStageStays": true,
+  "loopsBackToFirst": true,
+  "loopIndices": [
+    0,
+    1,
+    2,
+    3,
+    0
+  ],
   "editableControlsIgnored": true,
   "cameraControlsPreserved": true,
   "errors": [],

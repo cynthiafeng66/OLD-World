@@ -13,7 +13,7 @@ const url=process.env.KITCHEN_URL||'http://127.0.0.1:8766/';
  await checkStage(0);await page.locator('#view canvas').focus();
  await page.keyboard.down('Space');assert.equal((await measure()).index,1);await page.keyboard.down('Space');assert.equal((await measure()).index,1,'held key does not skip stages');await page.keyboard.up('Space');await checkStage(1);
  await page.keyboard.press('Space');await checkStage(2);await page.keyboard.press('Space');await checkStage(3);
- const finalCamera=(await measure()).camera;await page.keyboard.press('Space');assert.equal((await measure()).index,3,'last shape stays visible');assert.deepEqual((await measure()).camera,finalCamera,'Space does not move or lock the camera');
+ const finalCamera=(await measure()).camera,loopIndices=[];for(const expected of [0,1,2,3,0]){await page.keyboard.press('Space');const s=await measure();loopIndices.push(s.index);assert.equal(s.index,expected,'the fourth shape wraps to the first and keeps cycling');assert.equal(s.visible.filter(Boolean).length,1);assert.ok(s.visible[expected]);}assert.deepEqual((await measure()).camera,finalCamera,'Space does not move or lock the camera');
  await page.evaluate(()=>{kitchen.doughSequence.setStage(1);const input=document.createElement('input');input.id='keyboard-test';document.body.append(input);input.focus();});await page.keyboard.press('Space');assert.equal((await measure()).index,1,'typing into a control does not advance the dough');await page.evaluate(()=>document.querySelector('#keyboard-test').remove());
  await page.evaluate(()=>kitchen.doughSequence.reset());await page.click('#knife-collapse');await page.locator('#knife-mode').focus();await page.keyboard.press('Space');assert.equal((await measure()).index,0,'camera controls keep their own keyboard behavior');await page.keyboard.press('Escape');
  if(process.argv.includes('--export')){
@@ -26,5 +26,5 @@ const url=process.env.KITCHEN_URL||'http://127.0.0.1:8766/';
   for(const index of [2,3,4])assert.ok(!doc.nodes.some(n=>n.extras?.asset===`native-dough-stage-${index}`),'hidden dough stages are excluded');
  }
  assert.deepEqual(errors,[]);assert.deepEqual(missing,[]);
- const report={passed:true,url,initial,stages,oneStepPerPress:true,heldKeyIgnored:true,lastStageStays:true,editableControlsIgnored:true,cameraControlsPreserved:true,errors,missing};fs.writeFileSync('output/dough-sequence-validation.json',JSON.stringify(report,null,2));console.log(JSON.stringify({passed:true,stages:stages.map(s=>({index:s.index,label:s.label,source:s.source,min:s.min,max:s.max})),errors,missing}));
+ const report={passed:true,url,initial,stages,oneStepPerPress:true,heldKeyIgnored:true,loopsBackToFirst:true,loopIndices,editableControlsIgnored:true,cameraControlsPreserved:true,errors,missing};fs.writeFileSync('output/dough-sequence-validation.json',JSON.stringify(report,null,2));console.log(JSON.stringify({passed:true,loopIndices,stages:stages.map(s=>({index:s.index,label:s.label,source:s.source,min:s.min,max:s.max})),errors,missing}));
  }finally{await browser.close();}})().catch(e=>{console.error(e);process.exitCode=1;});

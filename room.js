@@ -4,7 +4,7 @@ import {GLTFExporter} from 'three/addons/exporters/GLTFExporter.js';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
 import {RoomEnvironment} from 'three/addons/environments/RoomEnvironment.js';
 import {preserveSources} from './preserve-source-glb.js?v=20261026-batch';
-import {installDoughSequence} from './dough-sequence.js?v=20261029-dough';
+import {installDoughSequence} from './dough-sequence.js?v=20261029-dough-loop';
 import {installKitchenKnife} from './knife-control/kitchen-input.js?v=20261027-clean-ui';
 const $=s=>document.querySelector(s),scene=new T.Scene();scene.background=new T.Color('#bb9876');
 const renderer=new T.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});renderer.setPixelRatio(Math.min(devicePixelRatio,1.5));renderer.setSize(innerWidth,innerHeight);renderer.shadowMap.enabled=true;renderer.shadowMap.type=T.PCFSoftShadowMap;renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=.95;$('#view').append(renderer.domElement);

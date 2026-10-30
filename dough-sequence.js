@@ -44,12 +44,12 @@ export async function installDoughSequence({board,parent,parts,addOriginal,canva
     stages.forEach((stage,i)=>stage.group.visible=i===index);
     group.userData.stageIndex=index;
     canvas.dataset.doughStage=String(index+1);
-    canvas.setAttribute('aria-label',`Kitchen scene. ${stages[index].label}. ${index<stages.length-1?'Press Space for the next dough stage.':'Final dough stage.'}`);
+    canvas.setAttribute('aria-label',`Kitchen scene. ${stages[index].label}. Press Space for ${index<stages.length-1?'the next dough stage':'the first dough stage'}.`);
     invalidate();
     if(changed)window.dispatchEvent(new CustomEvent('kitchen:dough-stage',{detail:{index,label:stages[index].label,count:stages.length}}));
     return changed;
   }
-  function advance(){return index<stages.length-1?setStage(index+1):false;}
+  function advance(){return setStage((index+1)%stages.length);}
   function onKey(event){
     if(event.code!=='Space'&&event.key!==' ')return;
     if(event.repeat||event.isComposing||event.ctrlKey||event.metaKey||event.altKey)return;
