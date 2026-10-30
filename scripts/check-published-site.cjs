@@ -15,7 +15,7 @@ const url=process.argv[2]||'http://127.0.0.1:8771/OLD-World/';
  await page.goto(url,{waitUntil:'domcontentloaded',timeout:60000});
  await page.waitForFunction(()=>window.kitchen?.ready&&window.kitchenKnife,null,{timeout:240000});await page.locator('#loading').waitFor({state:'detached'});
  const layout=await page.evaluate(()=>({parts:kitchen.parts.length,corner:!!kitchen.kitchenCorner,removed:!document.querySelector('header,nav,#reference,#hint'),english:!/[\u3400-\u9fff]/u.test(document.body.innerText),background:getComputedStyle(document.querySelector('#knife-input')).backgroundColor,freeCamera:kitchen.controls.enabled&&kitchen.controls.minDistance<1}));
- assert.equal(layout.parts,15);assert.ok(layout.corner&&layout.removed&&layout.english&&layout.freeCamera);assert.equal(layout.background,'rgba(255, 255, 255, 0.7)');
+ assert.equal(layout.parts,16);assert.ok(layout.corner&&layout.removed&&layout.english&&layout.freeCamera);assert.equal(layout.background,'rgba(255, 255, 255, 0.7)');
  await page.click('#knife-start');await page.waitForFunction(()=>kitchenKnife.controller.workerReady,null,{timeout:40000});
  await page.selectOption('#knife-mode','object');await page.evaluate(()=>fakeCamera.show=true);
  await page.waitForFunction(()=>kitchenKnife.state?.active&&kitchen.interaction.action==='knife',null,{timeout:10000});

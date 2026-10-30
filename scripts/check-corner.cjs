@@ -19,7 +19,7 @@ const {chromium}=require('/Users/cynthiafeng/Desktop/旧世界/node_modules/play
  await shot('output/corner-completed.png',[.8,1.85,.35],[3.15,1.0,-2.5],38);
  await shot('output/corner-completed-top.png',[2.4,4.0,-.3],[3.3,.9,-2.5],45);
  if(process.argv.includes('--photo-only'))return;
- assert.equal(layout.parts,15);assert.ok(layout.english);assert.deepEqual(layout.originalTransforms,[{position:[-.5,.02,-2.5],scale:[7.4,7.4,7.4]},{position:[3.3,.02,.51],scale:[4,4,4]}]);
+ assert.equal(layout.parts,16);assert.ok(layout.english);assert.deepEqual(layout.originalTransforms,[{position:[-.5,.02,-2.5],scale:[7.4,7.4,7.4]},{position:[3.3,.02,.51],scale:[4,4,4]}]);
  for(const sample of layout.samples)assert.ok(sample.y>.96&&sample.y<1.01,'continuous solid corner counter '+JSON.stringify(sample));
  assert.ok(layout.tiles.every(t=>t.x>4.05&&t.x<4.22),'right-wall tile return is solid');
  assert.deepEqual(errors,[]);

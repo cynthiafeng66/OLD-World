@@ -1,4 +1,6 @@
 {
+  "doughStagesOriginalSourcesAndTexturesVerified": true,
+  "initialDoughExportVerified": true,
   "cornerGeometryUVsAndOriginalTexturesVerified": true,
   "insetWindowAndTileInfillVerified": true,
   "allOriginalModelGroupsUseUniformScale": true,

@@ -84,3 +84,7 @@ Loading messages and camera controls are in English. The top-left branding, refe
 ## Live website
 
 [Open Old World Kitchen](https://cynthiafeng66.github.io/OLD-World/). Pushing to `main` deploys through `.github/workflows/pages.yml`. The workflow fetches the runtime models from Git LFS and packages their actual bytes with `scripts/build-pages.py`; source backups, full-room exports and private local reference photos are not included in the hosted site. Original model textures are copied without conversion.
+
+## Dough stages on the brown board
+
+The brown baking board starts with the round dough model. With the kitchen scene focused, press Space once to advance through round, oval, irregular and flattened dough. Holding Space does not skip stages, and the fourth shape stays visible. Camera controls keep their keyboard behavior. The four source models are preserved in `assets/models/`; lightweight previews retain the exact original texture image bytes. `scripts/prepare-dough-stages.mjs` rebuilds those previews and `scripts/check-dough-sequence.cjs` verifies placement and keyboard transitions.

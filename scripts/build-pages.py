@@ -16,6 +16,8 @@ PARTS = [
     'work-table.glb', 'floor.glb', 'rack-plates-display.glb',
     'flour-sack-display.glb', 'rice-bag-display.glb', 'bread-pasta-display.glb',
     'frying-pan-display.glb', 'stockpot-display.glb', 'baking-set-no-towel-display.glb',
+    'dough-stage-1-display.glb', 'dough-stage-2-display.glb',
+    'dough-stage-3-display.glb', 'dough-stage-4-display.glb',
 ]
 BINARY_ASSETS = ([f'assets/models/{name}' for name in MODELS]
                  + [f'assets/parts/{name}' for name in PARTS])
@@ -38,7 +40,7 @@ if destination.exists():
 destination.mkdir(parents=True)
 (destination / '.old-world-pages-build').touch()
 
-paths = ['index.html', 'style.css', 'room.js', 'preserve-source-glb.js',
+paths = ['index.html', 'style.css', 'room.js', 'preserve-source-glb.js', 'dough-sequence.js',
          'assets/models/kitchen-1-window-layout.json',
          'assets/parts/manifest.json', 'assets/images/window-landscape.png'] + BINARY_ASSETS
 paths.extend(str(p.relative_to(ROOT)) for p in (ROOT / 'knife-control').glob('*')

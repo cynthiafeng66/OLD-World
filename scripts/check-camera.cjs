@@ -2,7 +2,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs');
 const{chromium}=require('/Users/cynthiafeng/Desktop/旧世界/node_modules/playwright');
 (async()=>{const browser=await chromium.launch({executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',headless:true,args:['--no-sandbox']});try{
  const page=await browser.newPage({viewport:{width:1440,height:900}}),errors=[];page.on('pageerror',e=>errors.push(e.message));await page.goto('http://127.0.0.1:8766/');await page.waitForFunction(()=>window.kitchen?.ready,null,{timeout:120000});await page.locator('#loading').waitFor({state:'detached'});
- assert.equal(await page.evaluate(()=>kitchen.parts.length),15);
+ assert.equal(await page.evaluate(()=>kitchen.parts.length),16);
  await page.evaluate(()=>kitchen.controls.enableDamping=false);
  await page.mouse.move(700,420);await page.mouse.down();await page.mouse.move(1100,420,{steps:8});await page.mouse.up();assert.ok(Math.abs(await page.evaluate(()=>kitchen.controls.getAzimuthalAngle()))>.48,'orbit goes beyond former angular limit');
  await page.mouse.move(700,420);await page.mouse.down({button:'right'});await page.mouse.move(1300,420,{steps:8});await page.mouse.up({button:'right'});assert.ok(await page.evaluate(()=>Math.abs(kitchen.controls.target.x)>1.6||Math.abs(kitchen.controls.target.z)>1.65),'pan goes beyond former target bounds');

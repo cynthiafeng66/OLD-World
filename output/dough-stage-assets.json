@@ -1,0 +1,53 @@
+{
+  "passed": true,
+  "stages": [
+    {
+      "label": "Round dough",
+      "source": "dough ball 3d model.glb",
+      "display": "dough-stage-1-display.glb",
+      "sourceSHA256": "d7537287709b83cfa2bdd5b2267e2b876658f6ec8d4e459de05ccdd39d5e5c5d",
+      "textureImagesUnchanged": true,
+      "materialsUnchanged": true,
+      "file": "assets/parts/dough-stage-1-display.glb",
+      "originalTriangles": 1948172,
+      "displayTriangles": 107148,
+      "textureImagesCopiedVerbatim": true
+    },
+    {
+      "label": "Oval dough",
+      "source": "almond 3d model.glb",
+      "display": "dough-stage-2-display.glb",
+      "sourceSHA256": "3bb9ff164bcbbb1d206566b3aea698c2e9474446509a151a3f173b57e5d52723",
+      "textureImagesUnchanged": true,
+      "materialsUnchanged": true,
+      "file": "assets/parts/dough-stage-2-display.glb",
+      "originalTriangles": 1968212,
+      "displayTriangles": 108250,
+      "textureImagesCopiedVerbatim": true
+    },
+    {
+      "label": "Irregular dough",
+      "source": "almond 3d model_副本.glb",
+      "display": "dough-stage-3-display.glb",
+      "sourceSHA256": "3a7c25ccc5354884d13ea363d0f5f7e5c7c2f50ca8cee4cc3032f8790a9a2a67",
+      "textureImagesUnchanged": true,
+      "materialsUnchanged": true,
+      "file": "assets/parts/dough-stage-3-display.glb",
+      "originalTriangles": 1972578,
+      "displayTriangles": 108488,
+      "textureImagesCopiedVerbatim": true
+    },
+    {
+      "label": "Flattened dough",
+      "source": "almond kernel 3d model.glb",
+      "display": "dough-stage-4-display.glb",
+      "sourceSHA256": "32734f50db12273e7d262f4614a380a3204f73322c273e65f6a665b4f948a4e3",
+      "textureImagesUnchanged": true,
+      "materialsUnchanged": true,
+      "file": "assets/parts/dough-stage-4-display.glb",
+      "originalTriangles": 1929210,
+      "displayTriangles": 106106,
+      "textureImagesCopiedVerbatim": true
+    }
+  ]
+}

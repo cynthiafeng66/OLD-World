@@ -10,7 +10,7 @@ const{chromium}=require('/Users/cynthiafeng/Desktop/旧世界/node_modules/playw
   const groceries=[kitchen.flourSack,kitchen.riceBag,kitchen.breadPasta].map(o=>{const b=new T.Box3().setFromObject(o).applyMatrix4(inverse);return{name:o.name,min:b.min.toArray(),max:b.max.toArray(),scale:o.scale.toArray()}});
   return{parts:kitchen.parts.length,plates,groceries,english:!/[\u3400-\u9fff]/u.test(document.body.textContent),triangles:kitchen.renderer.info.render.triangles};
  });
- assert.equal(report.parts,15);assert.equal(report.plates.length,7);assert.equal(new Set(report.plates.map(p=>p.geometry)).size,1,'plates share display mesh');
+ assert.equal(report.parts,16);assert.equal(report.plates.length,7);assert.equal(new Set(report.plates.map(p=>p.geometry)).size,1,'plates share display mesh');
  for(const p of report.plates){assert.ok(Math.abs(p.normal[0])>.999&&Math.abs(p.normal[1])<.001,'plates stand upright');assert.ok(p.min[0]>-2.88&&p.max[0]<-2.18);assert.ok(p.min[1]>=1.14&&p.max[1]<1.50);assert.ok(p.min[2]>-3.0&&p.max[2]<-2.43)}
  for(let i=1;i<7;i++)assert.ok(report.plates[i].min[0]-report.plates[i-1].max[0]>.02,'plates do not intersect');
  for(const [i,p]of report.groceries.entries()){assert.ok(p.min[0]>-.34&&p.max[0]<.34,'food stays between shelf uprights');assert.ok(p.min[2]>-.12&&p.max[2]<.14,'food stays within shelf depth');const floor=i<2?.258:.490,ceiling=i<2?.478:.70;assert.ok(p.min[1]>floor&&p.min[1]<floor+.012,'food rests on shelf');assert.ok(p.max[1]<ceiling,'food clears shelf above');assert.ok(p.scale.every(v=>v===p.scale[0]),'original proportions preserved')}

@@ -42,7 +42,7 @@ const baseURL=process.env.KITCHEN_URL||'http://127.0.0.1:8766';
     await page.waitForFunction(()=>window.kitchenKnife && kitchen.ready,null,{timeout:120000});
     await page.waitForFunction(()=>!document.querySelector('#loading'),null,{timeout:5000});
     const roomParts=await page.evaluate(()=>kitchen.parts.map(p=>({name:p.name,position:p.position.toArray(),scale:p.scale.toArray()})));
-    assert.equal(roomParts.length,15,'scene loads the original room and white cutting board');
+    assert.equal(roomParts.length,16,'scene loads the original room and white cutting board');
     assert.equal(await page.evaluate(()=>kitchenKnife.knife.visible),false);
     await page.evaluate(()=>fakeCamera.denied=true);
     await page.click('#knife-start');await page.waitForFunction(()=>document.querySelector('#knife-message').textContent.includes('permission'));
@@ -109,7 +109,7 @@ const baseURL=process.env.KITCHEN_URL||'http://127.0.0.1:8766';
     const panel=await page.locator('#knife-input').boundingBox();assert.ok(panel.x>=0&&panel.x+panel.width<=390,'mobile panel fits');
     await page.screenshot({path:'output/knife-input-mobile.png'});
     assert.deepEqual(errors,[]);assert.deepEqual(remoteRequests,[]);
-    const report={passed:true,checks:['fifteen scene groups including corner cabinet','permission rejection and retry','local MediaPipe worker loads and infers','synthetic camera background capture','elongated object acquisition','3D knife tip projection','position and rotation following','mirrored movement and continuous sweep','manual tip reversal','loss clears input and knife','hand-only mode rejects toy rectangle','camera tracks released','title, reference and bottom toolbar removed','English loading and interface','translucent white camera panel','unchanged room model placement','knife excluded from room export group','collapse and mobile panel','no remote requests','no page errors','all four English recognition labels','object, dough and fist feedback','non-knife gestures never emit active knife input','free room camera preserved'],first,moving,projection,actionResults,cleanUI,errors,remoteRequests,modelWarnings};
+    const report={passed:true,checks:['sixteen scene groups including board dough sequence','permission rejection and retry','local MediaPipe worker loads and infers','synthetic camera background capture','elongated object acquisition','3D knife tip projection','position and rotation following','mirrored movement and continuous sweep','manual tip reversal','loss clears input and knife','hand-only mode rejects toy rectangle','camera tracks released','title, reference and bottom toolbar removed','English loading and interface','translucent white camera panel','unchanged room model placement','knife excluded from room export group','collapse and mobile panel','no remote requests','no page errors','all four English recognition labels','object, dough and fist feedback','non-knife gestures never emit active knife input','free room camera preserved'],first,moving,projection,actionResults,cleanUI,errors,remoteRequests,modelWarnings};
     fs.writeFileSync('output/knife-input-validation.json',JSON.stringify(report,null,2));console.log(JSON.stringify({passed:true,checks:report.checks,modelWarnings}));
   } finally {await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1;});
